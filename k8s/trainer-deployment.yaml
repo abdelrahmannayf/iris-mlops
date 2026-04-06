@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iris-trainer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: iris-trainer
+  template:
+    metadata:
+      labels:
+        app: iris-trainer
+    spec:
+      containers:
+      - name: trainer
+        image: YOUR_DOCKERHUB_USERNAME/iris-trainer:latest
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: "http://mlflow:5000"
+        - name: N_ESTIMATORS
+          value: "100"
+        - name: MAX_DEPTH
+          value: "3"
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
