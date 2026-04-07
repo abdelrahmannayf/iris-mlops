@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: trainer
-        image: YOUR_DOCKERHUB_USERNAME/iris-trainer:latest
+        image: abdelrahmannayf/iris-trainer:latest
         env:
         - name: MLFLOW_TRACKING_URI
           value: "http://mlflow:5000"
