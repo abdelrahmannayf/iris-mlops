@@ -95,7 +95,19 @@ Username: admin
 Password: admin
 
 ---
+## 🔒 Security
 
+- Docker images scanned with **Trivy** on every build
+- Containers run as **non-root** user
+- Secrets managed via **Jenkins Credentials**
+- Multi-stage builds to minimize attack surface
+
+---
+
+## 👨‍💻 Author
+
+**Abdelrahman Nayf**  
+- GitHub: [@abdelrahmannayf](https://github.com/abdelrahmannayf)
 ## 🔧 Local Development
 
 ```bash
@@ -110,16 +122,4 @@ docker-compose up
 # MLflow:     http://localhost:5000
 # Grafana:    http://localhost:3000
 # Prometheus: http://localhost:9090
-## 🔒 Security
 
-- Docker images scanned with **Trivy** on every build
-- Containers run as **non-root** user
-- Secrets managed via **Jenkins Credentials**
-- Multi-stage builds to minimize attack surface
-
----
-
-## 👨‍💻 Author
-
-**Abdelrahman Nayf**  
-- GitHub: [@abdelrahmannayf](https://github.com/abdelrahmannayf)
